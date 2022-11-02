@@ -171,7 +171,9 @@
                     <i class="fa-regular fa-face-smile"></i>
                 </span>
 
-                <input type="text" placeholder="scrivi un messaggio">
+                <input type="text" placeholder="scrivi un messaggio"
+                v-model="msg"
+                @keyup.enter="addNewMessage">
 
                 <span class="size-big color-gray">
                     <i class="fa-solid fa-microphone"></i>

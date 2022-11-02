@@ -10,6 +10,8 @@ createApp({
     data(){
         return{
 
+            msg: "",
+
             selector: 0,
 
             contacts: [
@@ -182,6 +184,20 @@ createApp({
     methods: {
         moveSelector(index){
             this.selector = index;
+        },
+
+        addNewMessage(){
+            console.log("1");
+
+            const newMsg = {
+                date: '',
+                message: this.msg,
+                status: 'sent',
+            };
+
+            this.contacts[this.selector].messages.push(newMsg);
+
+            this.msg = "";
         },
     }
 
