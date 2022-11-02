@@ -134,19 +134,20 @@ header{
 
 #sidebar #notifications{
     background-color: #8EDAFC;
+}
+
+#search-user , #notifications{
     height: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-
-#search-user{
-    padding: .5rem 2rem;
     /* debug */
     border-bottom: 1px solid red;
 }
+
+
 
 #search-user input{
     border: .25px solid lightgray;
