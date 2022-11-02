@@ -54,6 +54,10 @@ ul{
     color: #8EDAFC;
 }
 
+.color-gray{
+    color: gray;
+}
+
 .size-small{
     font-size: .8rem;
 }
@@ -136,6 +140,17 @@ section{
     border-radius: 7px;
     width: 80%;
     padding: .3rem;
+}
+
+#contacts{
+    height: calc(100% - (50px * 3));
+    overflow-y: scroll;
+}
+
+#contacts .friend-box{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    display: flex;
 }
 
 

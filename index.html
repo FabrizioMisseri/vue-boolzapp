@@ -41,15 +41,15 @@
 
                 <nav>
                     <ul>
-                        <li>
+                        <li class="color-gray">
                             <i class="fa-solid fa-user"></i>
                         </li>
 
-                        <li class="ml-1">
+                        <li class="ml-1 color-gray">
                             <i class="fa-regular fa-message"></i>
                         </li>
 
-                        <li class="ml-1">
+                        <li class="ml-1 color-gray">
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </li>
                     </ul>
@@ -77,15 +77,30 @@
 
             <!-- SEARCH-USER -->
             <section id="search-user">
-                <label for="find" class="mr-1">
+                <label for="find" class="color-gray mr-1">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
-                <input id="find" type="text" placeholder="">
+                <input id="find" type="text" placeholder="cerca o inizia una nuova chat">
             </section>
             <!-- / SEARCH-USER -->
 
             <!-- CONTATTI -->
             <section id="contacts">
+
+                <!-- friend-box -->
+                <div class="friend-box" 
+                v-for="(element) in contacts">
+                    <span class="align-middle">
+                        <img :src="`img/avatar${element.avatar}.jpg`" alt=""
+                        class="img-setup">
+                    </span>
+
+                    <span class="align-middle ml-1">
+                        <p>{{element.name}}</p> 
+                        <p class="color-gray size-small">Ultimo messaggio inviato</p>
+                    </span>
+                </div>
+                <!-- / friend-box -->
 
             </section>
             <!-- / CONTATTI -->
@@ -112,15 +127,15 @@
 
                 <nav>
                     <ul>
-                        <li>
+                        <li class="color-gray"> 
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </li>
 
-                        <li class="ml-1">
+                        <li class="color-gray ml-1">
                             <i class="fa-solid fa-paperclip"></i>
                         </li>
 
-                        <li class="ml-1">
+                        <li class="color-gray ml-1">
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </li>
                     </ul>
