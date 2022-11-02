@@ -14,12 +14,10 @@ body{
     background-color: aquamarine;
 }
 
-.wrapper{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+ul{
+    list-style: none;
 }
+
 
 
 /* UTILITIES */
@@ -28,11 +26,56 @@ body{
 
 /* COMMON */
 
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .container{
     width: 80%;
     margin: 0 auto;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 95%;
     /* debug */
-    min-height: 95%;
     border: 1px solid green;
 }
+
+main{
+    width: calc(100% / 3 * 2);   
+    height: 100%;
+}
+
+#sidebar{
+    width: calc(100% / 3 * 1);   
+    height: 100%;
+    /* debug */
+    border-right: 1px solid red;
+}
+
+header{
+    background-color: #EAEAEA;
+    height: 40px;
+    width: 100%;
+}
+
+
+/* SIDEBAR */
+
+#sidebar header{
+    display: flex;
+}
+
+#sidebar nav ul{
+    width: 50%;
+    display: flex;
+}
+
+
+/* MAIN */
+
+
+
