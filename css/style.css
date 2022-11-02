@@ -10,9 +10,29 @@ html{
     font-size: 100%;
 }
 
+body{
+    background-color: aquamarine;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 
 /* UTILITIES */
 
 
 
 /* COMMON */
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    /* debug */
+    min-height: 95%;
+    border: 1px solid green;
+}
