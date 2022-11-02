@@ -60,22 +60,39 @@ header{
     background-color: #EAEAEA;
     height: 40px;
     width: 100%;
+    display: flex;
 }
 
 
 /* SIDEBAR */
-
-#sidebar header{
-    display: flex;
-}
 
 #sidebar nav ul{
     width: 50%;
     display: flex;
 }
 
+#sidebar #notifications{
+    background-color: #8EDAFC;
+    height: 40px;
+    /* debug */
+    width: 100%;
+}
+
+
+
 
 /* MAIN */
 
+main header nav ul{
+    width: 50%;
+    display: flex;
+}
+
+main #chat{
+    background-image: url(../img/mine.jpg);
+    background-size: cover;
+    width: 100%;
+    height: calc(100% - 40px);
+}
 
 
