@@ -78,14 +78,29 @@
             <!-- HEADER MAIN -->
             <header>
                 <div>
-                    <!-- persona seleziona dalla chat -->
+                    <span class="align-middle">
+                        <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt=""
+                        class="img-setup">
+                    </span>
+
+                    <span class="align-middle ml-1">
+                        {{contacts[0].name}}
+                    </span>
                 </div>
 
                 <nav>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+
+                        <li class="ml-1">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </li>
+
+                        <li class="ml-1">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </li>
                     </ul>
                 </nav>
             </header>
