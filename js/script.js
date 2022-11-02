@@ -187,7 +187,7 @@ createApp({
         },
 
         addNewMessage(){
-            console.log("1");
+            console.log("charizard scelgo te!!!");
 
             const newMsg = {
                 date: '',
@@ -198,7 +198,25 @@ createApp({
             this.contacts[this.selector].messages.push(newMsg);
 
             this.msg = "";
+
+            setTimeout(this.botAnswer, 2000);
         },
-    }
+
+        botAnswer(){
+            console.log("io invece scelgo pikatchu!!!");
+
+            const newMsg = {
+                date: '',
+                message: 'lasciami stare o chiamo le guardie',
+                status: 'received',
+            };
+
+            this.contacts[this.selector].messages.push(newMsg);
+        },
+    },
+
+    created(){
+        console.log("compra bitcoin");
+    },
 
 }).mount("#app");
