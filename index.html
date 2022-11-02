@@ -151,8 +151,12 @@
                 <div class="item">
 
                     <div v-for="(element, index) in contacts[selector].messages"
-                    :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'"> 
-                        {{element.message}}
+                    :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'">
+                        
+                        <div :class="element.status === 'sent' ? 'box-msg-user-color' : 'box-msg-friend-color'">
+                            {{element.message}}
+                        </div>
+
                     </div>
 
                 </div>

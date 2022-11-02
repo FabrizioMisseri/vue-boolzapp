@@ -70,6 +70,18 @@ ul{
     background-color: #EAEAEA;
 }
 
+.d-flex{
+    display: flex;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.justify-content-start{
+    justify-content: flex-start;
+}
+
 
 /* COMMON */
 
@@ -190,6 +202,9 @@ main #message input{
     padding: .3rem;
 }
 
+
+/* CHAT BOX */
+
 main #chat{
     padding-top: 25px;
     padding-bottom: 25px;
@@ -200,10 +215,31 @@ main #chat .item{
     width: 80%;
 }
 
+main #chat .box-msg-user , main #chat .box-msg-friend{
+    width: 100%;
+    display: flex;
+}
+
 main #chat .box-msg-user{
+    justify-content: flex-end;
+}
+
+main #chat .box-msg-user-color{
     background-color: #D5F9BA;
 }
 
 main #chat .box-msg-friend{
+    justify-content: flex-start;
+}
+
+main #chat .box-msg-friend-color{
     background-color: white;
+}
+
+main #chat .box-msg-user-color , main #chat .box-msg-friend-color{
+    min-width: 40%;
+    max-width: 80%;
+    margin: .5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
 }
