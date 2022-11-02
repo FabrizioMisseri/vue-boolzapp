@@ -59,7 +59,11 @@ ul{
 }
 
 .size-small{
-    font-size: .8rem;
+    font-size: .75rem;
+}
+
+.size-big{
+    font-size: 1.25rem;
 }
 
 .active{
@@ -172,8 +176,18 @@ main #chat{
 
 main #message{
     height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     /* debug */
     border-top: 1px solid red;
+}
+
+main #message input{
+    border: .25px solid lightgray;
+    border-radius: 7px;
+    width: 85%;
+    padding: .3rem;
 }
 
 

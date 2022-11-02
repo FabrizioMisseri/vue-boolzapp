@@ -177,6 +177,12 @@ createApp({
             ]
 
         }
+    },
+
+    methods: {
+        moveSelector(index){
+            this.selector = index;
+        },
     }
 
 }).mount("#app");

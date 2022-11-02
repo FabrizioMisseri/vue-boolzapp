@@ -90,7 +90,8 @@
                 <!-- friend-box -->
                 <div class="friend-box" 
                 v-for="(element, index) in contacts"
-                :class="{'active': index === selector}">
+                :class="{'active': index === selector}"
+                @click="moveSelector(index)">
                     <span class="align-middle">
                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""
                         class="img-setup">
@@ -117,12 +118,12 @@
             <header>
                 <div>
                     <span class="align-middle">
-                        <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt=""
+                        <img :src="`img/avatar${contacts[selector].avatar}.jpg`" alt=""
                         class="img-setup">
                     </span>
 
                     <span class="align-middle ml-1">
-                        {{contacts[0].name}}
+                        {{contacts[selector].name}}
                     </span>
                 </div>
 
@@ -149,7 +150,19 @@
             <!-- / CHAT SECTION -->
 
             <!-- MESSAGE SECTION -->
-            <section id="message"></section>
+            <section id="message">
+
+                <span class="size-big color-gray">
+                    <i class="fa-regular fa-face-smile"></i>
+                </span>
+
+                <input type="text" placeholder="scrivi un messaggio">
+
+                <span class="size-big color-gray">
+                    <i class="fa-solid fa-microphone"></i>
+                </span>
+
+            </section>
             <!-- / MESSAGE SECTION -->
 
         </main>
