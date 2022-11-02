@@ -109,10 +109,6 @@ header{
     padding: 0 1rem;
 }
 
-section{
-    padding: 0 1rem;
-}
-
 
 /* SIDEBAR */
 
@@ -126,11 +122,12 @@ section{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #search-user{
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: .5rem 2rem;
     /* debug */
     border-bottom: 1px solid red;
 }
@@ -145,12 +142,16 @@ section{
 #contacts{
     height: calc(100% - (50px * 3));
     overflow-y: scroll;
+    width: 100%;
 }
 
 #contacts .friend-box{
+    width: 100%;
     padding-top: .75rem;
     padding-bottom: .75rem;
     display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 

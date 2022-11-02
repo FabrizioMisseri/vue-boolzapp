@@ -30,7 +30,7 @@
             <header>
                 <div>
                     <span class="align-middle">
-                        <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt=""
+                        <img :src="`img/avatar${contacts[1].avatar}.jpg`" alt=""
                         class="img-setup">
                     </span>
 
@@ -89,7 +89,8 @@
 
                 <!-- friend-box -->
                 <div class="friend-box" 
-                v-for="(element) in contacts">
+                v-for="(element, index) in contacts"
+                :class="{'active': index === selector}">
                     <span class="align-middle">
                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""
                         class="img-setup">

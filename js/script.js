@@ -10,6 +10,8 @@ createApp({
     data(){
         return{
 
+            selector: 0,
+
             contacts: [
                 {
                     name: 'Michele',
