@@ -216,7 +216,7 @@ createApp({
     },
 
     created(){
-        console.log("compra bitcoin");
+        console.log("COMPRA BITCOIN");
     },
 
 }).mount("#app");

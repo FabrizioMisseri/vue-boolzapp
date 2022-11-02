@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background-color: aquamarine;
+    background-color: rgb(183, 253, 230);
 }
 
 ul{
@@ -99,8 +99,6 @@ ul{
     display: flex;
     flex-wrap: wrap;
     height: 95%;
-    /* debug */
-    border: 1px solid green;
 }
 
 main{
@@ -111,8 +109,7 @@ main{
 #sidebar{
     width: calc(100% / 3 * 1);   
     height: 100%;
-    /* debug */
-    border-right: 1px solid red;
+    border-right: .05px solid rgba(202, 202, 202, 0.932);
 }
 
 header{
@@ -143,8 +140,6 @@ header{
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* debug */
-    border-bottom: 1px solid red;
 }
 
 
@@ -192,8 +187,6 @@ main #message{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* debug */
-    border-top: 1px solid red;
 }
 
 main #message input{
