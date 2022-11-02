@@ -146,7 +146,18 @@
             <!-- / HEADER MAIN -->
 
             <!-- CHAT SECTION -->
-            <section id="chat"></section>
+            <section id="chat">
+
+                <div class="item">
+
+                    <div v-for="(element, index) in contacts[selector].messages"
+                    :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'"> 
+                        {{element.message}}
+                    </div>
+
+                </div>
+
+            </section>
             <!-- / CHAT SECTION -->
 
             <!-- MESSAGE SECTION -->
