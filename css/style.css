@@ -209,6 +209,7 @@ main #message input{
 main #chat{
     padding-top: 25px;
     padding-bottom: 25px;
+    overflow-y: scroll;
 }
 
 main #chat .item{

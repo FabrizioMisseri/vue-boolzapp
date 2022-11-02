@@ -199,7 +199,7 @@ createApp({
 
             this.msg = "";
 
-            setTimeout(this.botAnswer, 2000);
+            setTimeout(this.botAnswer, 1000);
         },
 
         botAnswer(){
