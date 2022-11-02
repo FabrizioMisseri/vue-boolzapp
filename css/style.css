@@ -58,7 +58,7 @@ main{
 
 header{
     background-color: #EAEAEA;
-    height: 40px;
+    height: 50px;
     width: 100%;
     display: flex;
 }
@@ -73,7 +73,7 @@ header{
 
 #sidebar #notifications{
     background-color: #8EDAFC;
-    height: 40px;
+    height: 50px;
     /* debug */
     width: 100%;
 }
@@ -92,7 +92,13 @@ main #chat{
     background-image: url(../img/mine.jpg);
     background-size: cover;
     width: 100%;
-    height: calc(100% - 40px);
+    height: calc(100% - (50px * 2));
+}
+
+main #message{
+    height: 50px;
+    /* debug */
+    border-top: 1px solid red;
 }
 
 
