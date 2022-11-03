@@ -215,8 +215,4 @@ createApp({
         },
     },
 
-    created(){
-        console.log("COMPRA BITCOIN");
-    },
-
 }).mount("#app");
