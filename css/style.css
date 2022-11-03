@@ -58,6 +58,10 @@ ul{
     color: gray;
 }
 
+.size-mini{
+    font-size: .5rem;
+}
+
 .size-small{
     font-size: .75rem;
 }
@@ -237,4 +241,11 @@ main #chat .box-msg-user-color , main #chat .box-msg-friend-color{
     margin: .5rem 0;
     padding: 1rem;
     border-radius: 10px;
+    position: relative;
+}
+
+.date{
+    position: absolute;
+    right: 8px;
+    bottom: 3px;
 }

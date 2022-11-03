@@ -5,10 +5,16 @@
 
 const {createApp} = Vue;
 
+const dt = luxon.DateTime;
+
 createApp({
+
+    
 
     data(){
         return{
+
+            now: "",
 
             msg: "",
 
@@ -189,8 +195,10 @@ createApp({
         addNewMessage(){
             console.log("charizard scelgo te!!!");
 
+            this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+
             const newMsg = {
-                date: '',
+                date: this.now,
                 message: this.msg,
                 status: 'sent',
             };
@@ -199,20 +207,28 @@ createApp({
 
             this.msg = "";
 
+            this.now = "";
+
             setTimeout(this.botAnswer, 1000);
         },
 
         botAnswer(){
             console.log("io invece scelgo pikatchu!!!");
 
+            this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+
             const newMsg = {
-                date: '',
+                date: this.now,
                 message: 'lasciami stare o chiamo le guardie',
                 status: 'received',
             };
 
             this.contacts[this.selector].messages.push(newMsg);
+
+            this.now = "";
         },
     },
+
+
 
 }).mount("#app");
