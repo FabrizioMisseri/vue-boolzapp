@@ -223,6 +223,8 @@ createApp({
                 date: this.now,
                 message: 'lasciami stare o chiamo le guardie',
                 status: 'received',
+                // perchè ho settato flag a FALSE solo qui e mi funziona a tutti? ...boh...
+                flag: false,
             };
 
             this.contacts[this.fakeSelector].messages.push(newMsg);
@@ -231,6 +233,30 @@ createApp({
 
             this.fakeSelector = 0;
         },
+
+        showHiddenMenu(element){
+            for(let i = 0; i < this.contacts.length; i++) {
+                for(let j = 0; j < this.contacts[i].messages.length; j++){
+                    if(this.contacts[i].messages[j].flag === true){
+
+                        this.contacts[i].messages[j].flag = !this.contacts[i].messages[j].flag;
+                    }
+                }
+            }
+            
+            element.flag = !element.flag;
+        },
+
+        deleteAllHiddenMenu(){
+            for(let i = 0; i < this.contacts.length; i++) {
+                for(let j = 0; j < this.contacts[i].messages.length; j++){
+                    if(this.contacts[i].messages[j].flag === true){
+
+                        this.contacts[i].messages[j].flag = !this.contacts[i].messages[j].flag;
+                    }
+                }
+            }
+        }
     },
 
 

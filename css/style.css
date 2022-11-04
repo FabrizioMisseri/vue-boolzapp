@@ -53,6 +53,10 @@ ul{
     margin-right: 1rem;;
 }
 
+.mb-1{
+    margin-bottom: 1rem;
+}
+
 .circle{
     border-radius: 100%;
     line-height: 30px;
@@ -68,6 +72,10 @@ ul{
 
 .color-gray{
     color: gray;
+}
+
+.color-lightgray{
+    color: lightgray;
 }
 
 .size-mini{
@@ -264,4 +272,21 @@ main #chat .box-msg-user-color , main #chat .box-msg-friend-color{
     position: absolute;
     right: 8px;
     bottom: 3px;
+}
+
+.chevron-msg{
+    position: absolute;
+    right: 7px;
+    top: 4px;
+}
+
+.hidden-menu{
+    position: absolute;
+    right: 7px;
+    top: 20px;
+    padding: .7rem;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
 }

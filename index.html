@@ -162,18 +162,29 @@
             <!-- / HEADER MAIN -->
 
             <!-- CHAT SECTION -->
-            <section id="chat">
+            <section id="chat"
+            @click="deleteAllHiddenMenu">
 
                 <div class="item">
 
                     <div v-for="(element, index) in contacts[selector].messages"
                     :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'">
                         
-                        <div :class="element.status === 'sent' ? 'box-msg-user-color' : 'box-msg-friend-color'">
+                        <div :class="element.status === 'sent' ? 'box-msg-user-color' : 'box-msg-friend-color'"
+                        @click.stop="showHiddenMenu(element)">
                             {{element.message}}
 
                             <small class="date size-mini color-gray">
                                 {{element.date}}
+                            </small>
+
+                            <small class="chevron-msg color-lightgray">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </small>
+
+                            <small class="hidden-menu" v-show="element.flag === true">
+                                <p class="mb-1">message info</p>
+                                <p>delete message</p>
                             </small>
                         </div>
 
