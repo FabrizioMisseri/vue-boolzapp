@@ -83,7 +83,7 @@
                 <label for="find" class="color-gray mr-1">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
-                <input id="find" type="text" placeholder="cerca o inizia una nuova chat" v-model="filter">
+                <input id="find" type="text" placeholder="cerca o inizia una nuova chat" v-model.trim="filter">
             </section>
             <!-- / SEARCH-USER -->
 
@@ -95,7 +95,7 @@
                 v-for="(element, index) in contacts"
                 :class="{'active': index === selector}"
                 @click="moveSelector(index)"
-                v-show="filter === '' || element.name.includes(filter)">
+                v-show="filter === '' || (element.name.toLowerCase()).includes(filter.toLowerCase())">
                     <span class="align-middle">
                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""
                         class="img-setup">
