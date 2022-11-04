@@ -168,7 +168,8 @@
                 <div class="item">
 
                     <div v-for="(element, index) in contacts[selector].messages"
-                    :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'">
+                    :class="element.status === 'sent' ? 'box-msg-user' : 'box-msg-friend'"
+                    v-show="element.message !== ''">
                         
                         <div :class="element.status === 'sent' ? 'box-msg-user-color' : 'box-msg-friend-color'"
                         @click.stop="showHiddenMenu(element)">
@@ -182,9 +183,9 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </small>
 
-                            <small class="hidden-menu" v-show="element.flag === true">
+                            <small class="hidden-menu" v-show="element.flagHiddenMenu === true">
                                 <p class="mb-1">message info</p>
-                                <p>delete message</p>
+                                <p @click.stop="deleteMsg(element)">delete message</p>
                             </small>
                         </div>
 

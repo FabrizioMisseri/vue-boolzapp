@@ -224,7 +224,8 @@ createApp({
                 message: 'lasciami stare o chiamo le guardie',
                 status: 'received',
                 // perchè ho settato flag a FALSE solo qui e mi funziona a tutti? ...boh...
-                flag: false,
+                flagHiddenMenu: false,
+                flagDeleteMsg: false,
             };
 
             this.contacts[this.fakeSelector].messages.push(newMsg);
@@ -237,26 +238,30 @@ createApp({
         showHiddenMenu(element){
             for(let i = 0; i < this.contacts.length; i++) {
                 for(let j = 0; j < this.contacts[i].messages.length; j++){
-                    if(this.contacts[i].messages[j].flag === true){
+                    if(this.contacts[i].messages[j].flagHiddenMenu === true){
 
-                        this.contacts[i].messages[j].flag = !this.contacts[i].messages[j].flag;
+                        this.contacts[i].messages[j].flagHiddenMenu = !this.contacts[i].messages[j].flagHiddenMenu;
                     }
                 }
             }
-            
-            element.flag = !element.flag;
+
+            element.flagHiddenMenu = !element.flagHiddenMenu;
         },
 
         deleteAllHiddenMenu(){
             for(let i = 0; i < this.contacts.length; i++) {
                 for(let j = 0; j < this.contacts[i].messages.length; j++){
-                    if(this.contacts[i].messages[j].flag === true){
+                    if(this.contacts[i].messages[j].flagHiddenMenu === true){
 
-                        this.contacts[i].messages[j].flag = !this.contacts[i].messages[j].flag;
+                        this.contacts[i].messages[j].flagHiddenMenu = !this.contacts[i].messages[j].flagHiddenMenu;
                     }
                 }
             }
-        }
+        },
+
+        deleteMsg(element){
+            element.message = "";
+        },
     },
 
 
