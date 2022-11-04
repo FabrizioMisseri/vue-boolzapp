@@ -193,7 +193,7 @@
                 </span>
 
                 <input type="text" placeholder="scrivi un messaggio"
-                v-model="msg"
+                v-model.trim="msg"
                 @keyup.enter="addNewMessage">
 
                 <span class="size-big color-gray">

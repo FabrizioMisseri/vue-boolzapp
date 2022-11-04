@@ -191,25 +191,27 @@ createApp({
         },
 
         addNewMessage(){
-            console.log("charizard scelgo te!!!");
-
-            this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-
-            this.fakeSelector = this.selector;
-
-            const newMsg = {
-                date: this.now,
-                message: this.msg,
-                status: 'sent',
-            };
-
-            this.contacts[this.fakeSelector].messages.push(newMsg);
-
-            this.msg = "";
-
-            this.now = "";
-
-            setTimeout(this.botAnswer, 1000);
+            if (this.msg !== ""){
+                console.log("charizard scelgo te!!!");
+    
+                this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+    
+                this.fakeSelector = this.selector;
+    
+                const newMsg = {
+                    date: this.now,
+                    message: this.msg,
+                    status: 'sent',
+                };
+    
+                this.contacts[this.fakeSelector].messages.push(newMsg);
+    
+                this.msg = "";
+    
+                this.now = "";
+    
+                setTimeout(this.botAnswer, 1000);
+            }
         },
 
         botAnswer(){
