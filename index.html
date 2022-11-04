@@ -95,7 +95,7 @@
                 v-for="(element, index) in contacts"
                 :class="{'active': index === selector}"
                 @click="moveSelector(index)"
-                v-show="filter === '' || element.name.includes(chatFilter)">
+                v-show="filter === '' || element.name.includes(filter)">
                     <span class="align-middle">
                         <img :src="`img/avatar${element.avatar}.jpg`" alt=""
                         class="img-setup">
