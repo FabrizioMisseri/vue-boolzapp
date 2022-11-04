@@ -16,6 +16,8 @@ createApp({
 
             selector: 0,
 
+            fakeSelector : 0,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -193,13 +195,15 @@ createApp({
 
             this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
 
+            this.fakeSelector = this.selector;
+
             const newMsg = {
                 date: this.now,
                 message: this.msg,
                 status: 'sent',
             };
 
-            this.contacts[this.selector].messages.push(newMsg);
+            this.contacts[this.fakeSelector].messages.push(newMsg);
 
             this.msg = "";
 
@@ -219,9 +223,11 @@ createApp({
                 status: 'received',
             };
 
-            this.contacts[this.selector].messages.push(newMsg);
+            this.contacts[this.fakeSelector].messages.push(newMsg);
 
             this.now = "";
+
+            this.fakeSelector = 0;
         },
     },
 
