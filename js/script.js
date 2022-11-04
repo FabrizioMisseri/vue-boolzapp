@@ -8,6 +8,8 @@ createApp({
     data(){
         return{
 
+            filter: "",
+
             now: "",
 
             msg: "",
